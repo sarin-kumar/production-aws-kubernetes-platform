@@ -1,0 +1,9 @@
+aws_region = "ap-south-1"
+name = "production-platform"
+
+# Set these to valid AZs in your selected region.
+availability_zones = ["ap-south-1a", "ap-south-1b"]
+
+# Never commit the real password. Supply it securely, for example:
+# export TF_VAR_db_password='...'
+db_password = "CHANGE-ME-DO-NOT-COMMIT"

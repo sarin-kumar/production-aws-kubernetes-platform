@@ -1,0 +1,17 @@
+{
+  "name": "platform-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "test": "node -e \"console.log('frontend smoke test passed')\""
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.8",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {}
+}

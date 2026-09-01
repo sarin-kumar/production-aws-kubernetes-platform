@@ -1,0 +1,38 @@
+namespace: platform
+
+frontend:
+  replicaCount: 2
+  image:
+    repository: YOUR_AWS_ACCOUNT_ID.dkr.ecr.YOUR_REGION.amazonaws.com/platform-frontend
+    tag: latest
+  service:
+    port: 80
+
+backend:
+  replicaCount: 2
+  image:
+    repository: YOUR_AWS_ACCOUNT_ID.dkr.ecr.YOUR_REGION.amazonaws.com/platform-backend
+    tag: latest
+  service:
+    port: 8080
+
+ingress:
+  enabled: true
+  className: alb
+  scheme: internet-facing
+
+resources:
+  frontend:
+    requests:
+      cpu: 50m
+      memory: 64Mi
+    limits:
+      cpu: 250m
+      memory: 256Mi
+  backend:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
